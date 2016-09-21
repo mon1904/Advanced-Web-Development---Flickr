@@ -1,0 +1,45 @@
+<!DOCTYPE html5>
+<html>
+<head>
+
+<title> Assignment 2 </title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>		
+<script src = "flickr.js"></script>
+<link rel = "stylesheet" href = "flickr.css">
+
+</head>
+<body onload="setupClicks();">
+
+
+<div id="MainContent">
+	
+	<div id = "image">
+		<div id = "outerDiv">
+			<div id="right"></div> 
+			<div id="left"></div> 
+			<div id = "innerDiv"></div>
+		</div>
+	
+	<div id ="displayImage"></div>
+	
+	</div>
+	
+	<div id = "finder">
+	
+			<div id="findButton">Find Images</div>
+			</br></br>
+
+			<p>Tags</p>
+			</br>
+			<input type="text" id = "tag" name="tag">
+			
+			
+			<div id = "tagDiv">	
+			</div><br>
+			
+			<input type = "button" value = "+" id = "addAnotherTag" onClick = "addTag()";>
+			
+	</div>
+
+</div>

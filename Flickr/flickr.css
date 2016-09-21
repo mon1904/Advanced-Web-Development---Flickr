@@ -1,0 +1,203 @@
+body
+{
+	background-color:black;
+}
+
+img{
+	image-rendering: auto;
+	image-rendering: crisp-edges;
+	image-rendering: pixelated;
+}
+
+#image
+{
+	position:absolute;
+	height:80%;
+	width:55%;
+	background-color:white;
+	right:5%;
+	top:5%;
+	border-radius:25px;
+	text-align:center;
+}
+
+.imageToDisplay{
+	height:65%;
+	width:80%;
+	margin-top:2%;
+	margin-right:auto;
+	margin-left:auto;
+	border-radius:25px;
+}
+
+#displayImage{
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+#left
+{
+	background:url('left.png') no-repeat center;
+	float:left;
+	width:15%;
+	height:100%;
+	cursor:pointer;
+	opacity:0;
+	z-index:999;
+    position: relative;
+}
+
+.images{
+	width:32%;
+	height:100%;
+	opacity:0.3;
+	border:1px solid black;
+	z-index:2;
+    position: relative;
+	border-radius:25px;
+	cursor:pointer;
+}
+
+.images img{
+	height:100%;
+	width:100%;
+}
+
+/*
+No used now but was using at the start
+*/
+@keyframes leftAnimate{
+    0% {left: 0px;}
+    25% {left: 20px;}
+    50% {left: 50px;}
+    75% {left: 100px;}
+    100% {left: 150px;}
+}
+/*
+No used now but was using at the start
+*/
+@keyframes rightAnimate{
+	0% {right: 0px;}
+    25% {right: 20px;}
+    50% {right: 50px;}
+    75% {right: 100px;}
+    100% {right: 150px;}
+}
+
+.moveLeft{	
+    animation-name: leftAnimate;
+    animation-duration: 1s;
+}
+
+.moveRight{	
+    animation-name: rightAnimate;
+    animation-duration: 1s;
+}
+
+#left:hover
+{
+	opacity:.6;
+}
+
+#right
+{
+	background:url('right.png') no-repeat center;
+	float:right;
+	width:15%;
+	height:100%;
+	cursor:pointer;
+	z-index:999;
+    position: relative;
+	opacity:0;
+}
+
+#right:hover
+{
+	opacity:.6;
+}
+
+#slideshow{
+	float:right;
+	width:60%;
+	overflow-x:hidden;
+	cursor:none;
+	z-index:1;
+}
+
+.show{
+	opacity:1;
+}
+
+.fade{
+	opacity:.3;
+}
+
+#innerDiv
+{
+	position:relative;
+	top:5%;
+	height:90%;
+	width:100%;
+	background-color:#E8E8E8;
+	display:inline-block;
+	white-space: nowrap;
+	margin-left:19%;
+}
+
+#mainDisplay
+{
+	position:absolute;
+	padding:0;
+	height:100%;
+	width:100%;
+	top:30%;
+	text-align:center;
+	border-radius:10px;
+}
+
+#outerDiv
+{
+	position:relative;
+	height:25%;
+	width:100%;
+	border-radius:10px;
+	background-color:#E8E8E8;
+	border-bottom-right-radius:0;
+	border-bottom-left-radius:0;
+	overflow:hidden;
+	white-space:nowrap;
+}
+
+#finder
+{
+	height:80%;
+	width:30%;
+	color:white;
+	position:absolute;
+	background-color:black;
+	top:5%;
+	left:10%;
+	font-size:40px;
+	font-weight: bold;
+}
+
+#findButton{
+	width:90%;
+	height:50px;
+	font-weight: bold;
+	font-size:20px;
+	background-color:lightgrey;
+	color:black;
+	text-align:center;
+	vertical-align: middle;
+	cursor:pointer;
+}
+
+.loading{
+	background-size: contain;
+	background:url('loading.gif') no-repeat center;
+}
+
+#finder input[type="text"] {
+	width:40%;
+}
